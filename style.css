@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+section {
+  display: grid;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  place-items: center;
+  background: #19172e;
+}
+section::after {
+  position: absolute;
+  content: "";
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(rgb(0, 255, 128), rgb(0, 110, 255));
+  top: 10px;
+  right: 20%;
+  border-radius: 10px;
+  animation: animate 5s ease-in-out infinite;
+}
+section::before {
+  position: absolute;
+  content: "";
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(rgb(47, 0, 128), rgb(0, 110, 255));
+  bottom: 10%;
+  left: 20%;
+  border-radius: 10px;
+  animation: animate 5s ease-in infinite;
+  animation-delay: 2s;
+}
+@keyframes animate{
+    0%,100%
+    {
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+}
+.card {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  z-index: 1000;
+  padding: 20px, 30px;
+  background: rgba(255, 255, 255, 0s);
+  border: 1px solid rgba(255, 255, 255, 0.6s);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+}
+.card.imgBox {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+}
+img {
+  width: 160px;
+  height: 150px;
+  border-radius: 50%;
+  margin-left: 6rem;
+  margin-top: 1rem;
+}
+.card .content .name {
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.card .content .work {
+  text-align: center;
+  color: #adff3f;
+  font-weight: 400;
+}
+.card .content .visit {
+  margin: 40px 0;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card .content .visit a
+{
+  text-decoration: none;
+  padding: 12px 24px;
+  color: #fff;
+  background: #3fc91de9;
+  border-radius: 20px;
+  transition: 0.4s ease;
+}
+.card .content .visit a:hover{
+    background-color: rgb(0, 110, 255);
+    color: #fff;
+}
+.card .content .socialmedia
+ {
+  text-align: center;
+}
+.card .content .socialmedia a
+{
+color: #fff;
+text-decoration: none;
+margin: 0 5px;
+transition: 0.4s ease;
+
+}
+.card .content .socialmedia a:hover
+{
+    color:rgb(119, 104, 104);
+}
